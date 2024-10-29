@@ -140,9 +140,22 @@ Polytechnique Montréal\\}
 
 \section{Introduction}
 
-yap yap
+Les ondes électromagnétiques ont plusieurs propriétés qui permettent d'expliquer les différents
+phénomènes optiques observés dans la vie de tous les jours. L'une d'entre elles est la polarisation,
+qui dicte la direction d'oscillation du champ électrique dans une onde électromagnétique. Elle
+est fréquemment utilisée pour faire fonctionner différents objets communs, tels que des écrans à
+cristaux liquides et des verres polarisés pour des lunettes. Ce laboratoire se concentre sur l'analyse
+de cette propriété dans un système optique. Pour se faire, une expérience de mesure de puissance sera
+faite avec des filtres polariseurs linéaires, qui permettent de ne laisser passer qu'une seule polarisation de
+la lumière. Différents nombres et différentes orientations des polariesurs seront testés en laboratoire, mais
+aussi modélisés mathématiquement au préalable. Ces modélisations seront faites à l'aide de deux formalismes, soit
+le classique où l'expression standard d'une onde électromagnétique classique est utilisée, et le formalisme de
+Jones, où l'état de polarisation d'une onde est décrit par un vecteur de Jones. Le document présent détaille
+le fondement théorique de la polarisation et de ses formalismes, détaille les montages qui seront utilisés
+pour l'expérience, et émet des hypothèses sur les observations à faire en laboratoire à l'aide du modèle
+mathématique.
 
-\section{Théorie}
+\section{Théorie}\label{theo}
 Cette section présente les principes physiques et les méthodes mathématiques importantes à l'expérience à réaliser.
 
 \subsection{Onde électromagnétique}
@@ -204,28 +217,40 @@ yap yap
 
 \section{Hypothèses}
 
-yap yap
+Cette section utilise les deux modèles présentés à la section \ref{theo} pour simuler les mesures de
+coefficients de transmission qui pourront être faits avec les montages.
 
 \subsection{Modèle classique}
 
+Avec le modèle classique, les courbes présentées à la figure \ref{classique} montrent la variation
+du coefficient de transmission en fonction de la variation de l'angle $\theta$ autant pour le 
+système à deux polariseurs qu'à trois polariseurs.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{coeff_classique.png}
-  \caption{yap}
+  \caption{Coefficients de transmission pour le modèle classique.}
   \label{classique}
 \end{figure}
 
+Il est donc possible de faire comme hypothèse que le montage à deux polariseurs présente un comportement
+sinusoidal entre 0 et 1 pour son coefficient de transmission. Quant au montage à trois polariseurs, cette
+courbe est plus aplatie aux minimums et est toujours sous la courbe de deux polariseurs. La puissance est
+donc réduite avec l'ajout du polariseur, mais les minimums de puissance restent aux mêmes angles.
+
 \subsection{Modèle de Jones}
+
+La figure \ref{jones} présente les mêmes courbes que pour le modèle classique, mais avec le modèle de Jones.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{coeff_jones.png}
-  \caption{todo}
+  \caption{Coefficients de transmission pour le modèle de Jones.}
   \label{jones}
 \end{figure}
 
-
+Il est possible de voir que les résultats sont les mêmes que pour le modèle classique. Les hypothèses à émettre
+sont donc les mêmes.
 
 
 \clearpage
