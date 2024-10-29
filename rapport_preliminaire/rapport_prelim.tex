@@ -143,10 +143,48 @@ Polytechnique Montréal\\}
 yap yap
 
 \section{Théorie}
+Cette section présente les principes physiques et les méthodes mathématiques importantes à l'expérience à réaliser.
 
-yap yap
+\subsection{Onde électromagnétique}
+Les ondes électromagnétiques, telles que la lumière, correspondent à des perturbations oscillantes des champs électriques et magnétiques. Ces champs, perpendiculaires l'un à l'autre, oscillent également perpendiculairement à la direction de propagation de l'onde, formant une configuration tridimensionnelle caractéristique des ondes transervales. Ces ondes, comparativement aux ondes mécaniques, se propagent à la vitesse de la lumière. Celles-ci, produites par des particules chargées électroniquement en accélération, ne nécessitent aucun milieu de propagation, pouvant alors se propager dans le vide \textcolor{red}{(Source A)}.
 
-\subsection{Polarisation et polariseurs}
+Les ondes électromagnétiques sont régies par les équations de Maxwell et, à partir de celles-ci, il est possible d'obtenir les solutions générales aux équations d'onde, soient les ondes planes. Celles-ci, caractérisées par une direction de propagation $r$, une fréquence angulaire $\omega$, et un vecteur d'onde $k$, peuvent être écrites de la forme suivante \textcolor{red}{(Source B)} :
+\begin{equation}
+  \begin{aligned}
+  \mathbf{\Bar{E}}(\textbf{r},t)&=\mathbf{\Bar{E}_{0}}e^{i(\mathbf{kr}-\omega t)} & \;\;\;\;\;\;\;\; & \mathbf{\Bar{H}}(\mathbf{r},t)&=\mathbf{\Bar{H}_{0}}e^{i(\mathbf{kr}-\omega t)} \\
+  \end{aligned}
+  \tag{1}
+\end{equation}
+Ensemble, ces deux ondes planes sont des composantes potentielles d'une onde électromagnétique.
+
+% Source A : Electromagnetic waves pdf
+% Source B : Modern electrodynimics, Zangwill Chapter 16.
+
+\subsection{Polarisation}
+La polarisation est une propriété physique de la lumière, et des ondes électromagnétiques, correspondant à une mesure de l'orientation du champ électromagnétique. En d'autres termes, ce principe permet de déterminer la direction des oscillations, plus précisément celle d'un champ électrique \textcolor{red}{(Source 1)}. Plusieurs types de polarisation peuvent être observés tels que la polarisation linéaire, circulaire, et elliptique. Dans le cas linéaire, les ondes n'ont aucune différence de phases entre le champ électrique en $x$ et celui en $y$. Cette polarisation linéaire peut être écrite par l'équation suivante \textcolor{red}{(Source 2)} :
+\begin{equation}
+  \vec{E}_{0}=(E_{x},E_{y},0)
+\end{equation}
+La direction de la polarisation normalisée, dans le cas ci-dessus, peut alors être déterminée à l'aide de l'équation suivante :
+\begin{equation}
+  \hat{P}=\frac{E_{x}\hat{x}+E_{y}\hat{y}}{\sqrt{E_{x}^{2}+E_{y}^{2}}}
+\end{equation}
+La polarisation elliptique résulte d'une combinaison linéaire de composantes ayant une différence de phase et un rapport d'amplitude de valeurs arbitraires. Pour la polarisation circulaire, celle-ci correspond à une polarisation elliptique ayant une différence de phase de 90$^\circ$, pouvant alors être écrite de la manière suivante \textcolor{red}{(Source 3)} :
+\begin{equation}
+  \vec{E}_{0}=(E_{0},E_{0}e^{i\frac{\pi}{2}},0)
+\end{equation}
+Ainsi, lors d'une polarisation linéaire, le champ électrique est confiné sur un plan unique dans la direction de propagation, alors que, dans le cas des deux autres polarisations, le champ électrique rotationne à mesure que l'onde se propage.
+
+% Source 1 : https://science.nasa.gov/ems/02_anatomy/
+% Source 2 : Harvard pdf
+% Source 3 : https://www.idex-hs.com/resources/resources-detail/understanding-polarization
+
+\subsubsection{Polariseurs}
+Afin d'obtenir une certaine polarisation, les polariseurs, dispositifs permettant de filtrer la lumière, sont utilisés. Le fonctionnement de ces polariseurs consiste à sélectionner certaines ondes spécifiques de sorte que celles-ci aient une direction particulière \textcolor{red}{(Source 4)}. Ces polariseurs peuvent être divisés en trois catégories : réfléchissants, dichroïques, et biréfringents. Les polariseurs réfléchissants ont pour principe de transmettre les ondes souhaitées, tout en réfléchissant celles non-désirées. Dans le cas des dichroïques, ceux-ci, au lieu de réfléchir les faisceaux non-désirés, absorbent une polarisation spécifique et transmettent les autres. Finalement, les polariseurs biréfringents utilisent un cristal anisotrope pour séparer un faisceau lumineux en composantes de polarisation, ainsi ce type de polariseurs utilisent la dépendance de la polarisation à l'indice de réfraction \textcolor{red}{(Source 5)}.
+
+% Source 4 : Modern electrodynimics, Zangwill Chapter 16.
+
+% Source 5 : https://www.edmundoptics.fr/knowledge-center/application-notes/optics/introduction-to-polarization/
 
 \subsection{Modèle classique}
 
