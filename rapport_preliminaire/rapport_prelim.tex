@@ -158,25 +158,11 @@ mathématique.
 \section{Théorie}\label{theo}
 Cette section présente les principes physiques et les méthodes mathématiques importantes à l'expérience à réaliser.
 
-\subsection{Onde électromagnétique}
-Les ondes électromagnétiques, telles que la lumière, correspondent à des perturbations oscillantes des champs électriques et magnétiques. Ces champs, perpendiculaires l'un à l'autre, oscillent également perpendiculairement à la direction de propagation de l'onde, formant une configuration tridimensionnelle caractéristique des ondes transervales. Ces ondes, comparativement aux ondes mécaniques, se propagent à la vitesse de la lumière. Celles-ci, produites par des particules chargées électroniquement en accélération, ne nécessitent aucun milieu de propagation, pouvant alors se propager dans le vide \textcolor{red}{(Source A)}.
-
-Les ondes électromagnétiques sont régies par les équations de Maxwell et, à partir de celles-ci, il est possible d'obtenir les solutions générales aux équations d'onde, soient les ondes planes. Celles-ci, caractérisées par une direction de propagation $r$, une fréquence angulaire $\omega$, et un vecteur d'onde $k$, peuvent être écrites de la forme suivante \textcolor{red}{(Source B)} :
-\begin{equation}
-  \begin{aligned}
-  \mathbf{\Bar{E}}(\textbf{r},t)&=\mathbf{\Bar{E}_{0}}e^{i(\mathbf{kr}-\omega t)} & \;\;\;\;\;\;\;\; & \mathbf{\Bar{H}}(\mathbf{r},t)&=\mathbf{\Bar{H}_{0}}e^{i(\mathbf{kr}-\omega t)} \\
-  \end{aligned}
-  \tag{1}
-\end{equation}
-Ensemble, ces deux ondes planes sont des composantes potentielles d'une onde électromagnétique.
-
-% Source A : Electromagnetic waves pdf
-% Source B : Modern electrodynimics, Zangwill Chapter 16.
-
 \subsection{Polarisation}
 La polarisation est une propriété physique de la lumière, et des ondes électromagnétiques, correspondant à une mesure de l'orientation du champ électromagnétique. En d'autres termes, ce principe permet de déterminer la direction des oscillations, plus précisément celle d'un champ électrique \textcolor{red}{(Source 1)}. Plusieurs types de polarisation peuvent être observés tels que la polarisation linéaire, circulaire, et elliptique. Dans le cas linéaire, les ondes n'ont aucune différence de phases entre le champ électrique en $x$ et celui en $y$. Cette polarisation linéaire peut être écrite par l'équation suivante \textcolor{red}{(Source 2)} :
 \begin{equation}
   \vec{E}_{0}=(E_{x},E_{y},0)
+  \label{pol_lin}
 \end{equation}
 La direction de la polarisation normalisée, dans le cas ci-dessus, peut alors être déterminée à l'aide de l'équation suivante :
 \begin{equation}
@@ -200,10 +186,71 @@ Afin d'obtenir une certaine polarisation, les polariseurs, dispositifs permettan
 % Source 5 : https://www.edmundoptics.fr/knowledge-center/application-notes/optics/introduction-to-polarization/
 
 \subsection{Modèle classique}
+Les ondes électromagnétiques, telles que la lumière, correspondent à des perturbations oscillantes des champs électriques et magnétiques. Ces champs, perpendiculaires l'un à l'autre, oscillent également perpendiculairement à la direction de propagation de l'onde, formant une configuration tridimensionnelle caractéristique des ondes transervales. Ces ondes, comparativement aux ondes mécaniques, se propagent à la vitesse de la lumière. Celles-ci, produites par des particules chargées électroniquement en accélération, ne nécessitent aucun milieu de propagation, pouvant alors se propager dans le vide \textcolor{red}{(Source A)}.
+
+Les ondes électromagnétiques sont régies par les équations de Maxwell et, à partir de celles-ci, il est possible d'obtenir les solutions générales aux équations d'onde, soient les ondes planes. Celles-ci, caractérisées par une direction de propagation $r$, une fréquence angulaire $\omega$, et un vecteur d'onde $k$, peuvent être écrites de la forme suivante \textcolor{red}{(Source B)} :
+\begin{equation}
+  \begin{aligned}
+  \mathbf{\Bar{E}}(\textbf{r},t)&=\mathbf{\Bar{E}_{0}}e^{i(\mathbf{kr}-\omega t)} & \;\;\;\;\;\;\;\; & \mathbf{\Bar{H}}(\mathbf{r},t)&=\mathbf{\Bar{H}_{0}}e^{i(\mathbf{kr}-\omega t)} \\
+  \end{aligned}
+  \label{champs}
+\end{equation}
+Ensemble, ces deux ondes planes sont des composantes potentielles d'une onde électromagnétique. Cependant, tel que mentionné dans la section précédente, la polarisation concerne la direction du champ électrique, ainsi seulement la première équation $\mathbf{\Bar{E}}$ est considérée. Donc, par exemple, un champ électrique se dirigeant dans la direction $z$ aurait pour équation la suivante :
+\begin{equation}
+  \vec{E}(z,t)=
+  \begin{pmatrix}
+    E_{x} \\
+    E_{y} \\
+    0 \\
+  \end{pmatrix}
+  e^{i2\pi(\frac{z}{\lambda}-\frac{t}{T})}=
+  \begin{pmatrix}
+    E_{x} \\
+    E_{y} \\
+    0 \\
+  \end{pmatrix}
+  e^{i(kr-\omega t)}
+\end{equation}
+Où $\lambda$ correspond à la longueur d'onde, et $T$ à la période. Ainsi, en observant l'équation (\ref{pol_lin}), celle-ci représente une polarisation linéaire en $z$.
+
+% Source A : Electromagnetic waves pdf
+% Source B : Modern electrodynimics, Zangwill Chapter 16.
+
+\subsubsection{Puissance optique}
+La puissance optique correspond à la capacité d'un système optique à converger, ou à diverger, la lumière. Cette puissance peut être calculée à l'aide de la moyenne temporelle du vecteur de Poynting ($\vec{S}$), qui représente la densité de flux lié à la propagation de l'onde.
+\begin{equation}
+  P=\langle S\rangle=\frac{1}{\eta}|E|^{2}
+\end{equation}
+Où $\eta$ correspond à l'impédance du milieu de transmission, et $E$ au champ électrique.
 
 \subsection{Modèle de Jones}
+En optique, la polarisation de la lumière peut être représentée à l'aide du formalisme de Jones. Cette méthode consiste à décrire les composantes d'un champ, soient les états de polarisation, par un vecteur (2$\times$1), nommé vecteur de Jones $\vec{\mathcal{J}}$, et les composantes polarisantes, soient les éléments optiques, par une matrice (2$\times$2), nommée matrice de Jones $M_{\mathcal{J}}$. De manière spécifique, le vecteur de Jones représente l'amplitude et la phase d'un champ électrique dans les directions $x$ et $y$, ainsi, en utilisant la formulation précédente à l'équation (\ref{champs}) et en ajoutant une phase $\phi$, le vecteur de Jones est donné par :
+\begin{equation}
+  \vec{\mathcal{J}}=
+  \begin{pmatrix}
+    E_{0x} \\
+    E_{0y}e^{i\Delta\phi} \\
+  \end{pmatrix}
+\end{equation}
+En ce qui concerne la matrice, celle-ci peut subir des rotations, créant ainsi une nouvelle matrice. Cette rotation est décrite par la matrice de rotation suivante.
+\begin{equation}
+  R(\theta)=
+  \begin{pmatrix}
+    \cos(\theta) & \sin(\theta) \\
+    -\sin(\theta) & \cos(\theta) \\
+  \end{pmatrix}
+\end{equation}
+Où $\theta$ correspond à l'angle de rotation de la matrice. Ne s'appliquant qu'à la lumière entièrement polarisée, ce formalisme est, généralement, utilisé lors du traitement des phénomènes d'interférence et les problèmes de superposition des amplitudes de champ \textcolor{red}{(Source Z)}. À partir de cette formulation, l'état de polarisation résultant $\mathcal{J}$ est, ensuite, déterminée à l'aide d'un produit entre la matrice et le vecteur.
+\begin{equation}
+  \vec{\mathcal{J}}'=M_{\mathcal{J}}\cdot\vec{\mathcal{J}}
+\end{equation}
+Le modèle de Jones permet, tout comme le modèle classique, de calculer la puissance optique. Pour ce faire, il est possible d'utiliser le vecteur de Poyinting.
+\begin{equation}
+  P=\langle S\rangle=\frac{1}{2\eta}\|\vec{\mathcal{J}}\|^{2}
+\end{equation}
+Où $\eta$ correspond à l'impédance du milieu de transmission, et $\vec{\mathcal{J}}$ est le vecteur de Jones.
 
-
+% Source Z : https://spie.org/publications/spie-publication-resources/optipedia-free-optics-information/fg05_p57-61_jones_matrix_calculus#_=_
 
 \section{Méthodologie}
 
