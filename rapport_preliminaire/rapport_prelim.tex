@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{etoolbox}
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
-% \usepackage[numbers]{natbib}
+\usepackage[numbers]{natbib}
 \usepackage[T1]{fontenc}
 \usepackage{ragged2e}
 \usepackage[french]{babel}
@@ -159,7 +159,7 @@ mathématique.
 Cette section présente les principes physiques et les méthodes mathématiques importantes à l'expérience à réaliser.
 
 \subsection{Polarisation}
-La polarisation est une propriété physique de la lumière, et des ondes électromagnétiques, correspondant à une mesure de l'orientation du champ électromagnétique. En d'autres termes, ce principe permet de déterminer la direction des oscillations, plus précisément celle d'un champ électrique \textcolor{red}{(Source 1)}. Plusieurs types de polarisation peuvent être observés tels que la polarisation linéaire, circulaire, et elliptique. Dans le cas linéaire, les ondes n'ont aucune différence de phases entre le champ électrique en $x$ et celui en $y$. Cette polarisation linéaire peut être écrite par l'équation suivante \textcolor{red}{(Source 2)} :
+La polarisation est une propriété physique de la lumière, et des ondes électromagnétiques, correspondant à une mesure de l'orientation du champ électromagnétique. En d'autres termes, ce principe permet de déterminer la direction des oscillations, plus précisément celle d'un champ électrique \cite{national_aeronautics_and_space_administration_anatomy_2010}, circulaire, et elliptique. Dans le cas linéaire, les ondes n'ont aucune différence de phases entre le champ électrique en $x$ et celui en $y$. Cette polarisation linéaire peut être écrite par l'équation suivante \cite{schwartz_lecture_2021} :
 \begin{equation}
   \vec{E}_{0}=(E_{x},E_{y},0)
   \label{pol_lin}
@@ -168,27 +168,19 @@ La direction de la polarisation normalisée, dans le cas ci-dessus, peut alors �
 \begin{equation}
   \hat{P}=\frac{E_{x}\hat{x}+E_{y}\hat{y}}{\sqrt{E_{x}^{2}+E_{y}^{2}}}
 \end{equation}
-La polarisation elliptique résulte d'une combinaison linéaire de composantes ayant une différence de phase et un rapport d'amplitude de valeurs arbitraires. Pour la polarisation circulaire, celle-ci correspond à une polarisation elliptique ayant une différence de phase de 90$^\circ$, pouvant alors être écrite de la manière suivante \textcolor{red}{(Source 3)} :
+La polarisation elliptique résulte d'une combinaison linéaire de composantes ayant une différence de phase et un rapport d'amplitude de valeurs arbitraires. Pour la polarisation circulaire, celle-ci correspond à une polarisation elliptique ayant une différence de phase de 90$^\circ$, pouvant alors être écrite de la manière suivante \cite{erdogan_understanding_2024}:
 \begin{equation}
   \vec{E}_{0}=(E_{0},E_{0}e^{i\frac{\pi}{2}},0)
 \end{equation}
 Ainsi, lors d'une polarisation linéaire, le champ électrique est confiné sur un plan unique dans la direction de propagation, alors que, dans le cas des deux autres polarisations, le champ électrique rotationne à mesure que l'onde se propage.
 
-% Source 1 : https://science.nasa.gov/ems/02_anatomy/
-% Source 2 : Harvard pdf
-% Source 3 : https://www.idex-hs.com/resources/resources-detail/understanding-polarization
-
 \subsubsection{Polariseurs}
-Afin d'obtenir une certaine polarisation, les polariseurs, dispositifs permettant de filtrer la lumière, sont utilisés. Le fonctionnement de ces polariseurs consiste à sélectionner certaines ondes spécifiques de sorte que celles-ci aient une direction particulière \textcolor{red}{(Source 4)}. Ces polariseurs peuvent être divisés en trois catégories : réfléchissants, dichroïques, et biréfringents. Les polariseurs réfléchissants ont pour principe de transmettre les ondes souhaitées, tout en réfléchissant celles non-désirées. Dans le cas des dichroïques, ceux-ci, au lieu de réfléchir les faisceaux non-désirés, absorbent une polarisation spécifique et transmettent les autres. Finalement, les polariseurs biréfringents utilisent un cristal anisotrope pour séparer un faisceau lumineux en composantes de polarisation, ainsi ce type de polariseurs utilisent la dépendance de la polarisation à l'indice de réfraction \textcolor{red}{(Source 5)}.
-
-% Source 4 : Modern electrodynimics, Zangwill Chapter 16.
-
-% Source 5 : https://www.edmundoptics.fr/knowledge-center/application-notes/optics/introduction-to-polarization/
+Afin d'obtenir une certaine polarisation, les polariseurs, dispositifs permettant de filtrer la lumière, sont utilisés. Le fonctionnement de ces polariseurs consiste à sélectionner certaines ondes spécifiques de sorte que celles-ci aient une direction particulière \cite{zangwill_modern_2012}, dichroïques, et biréfringents. Les polariseurs réfléchissants ont pour principe de transmettre les ondes souhaitées, tout en réfléchissant celles non-désirées. Dans le cas des dichroïques, ceux-ci, au lieu de réfléchir les faisceaux non-désirés, absorbent une polarisation spécifique et transmettent les autres. Finalement, les polariseurs biréfringents utilisent un cristal anisotrope pour séparer un faisceau lumineux en composantes de polarisation, ainsi ce type de polariseurs utilisent la dépendance de la polarisation à l'indice de réfraction \cite{noauthor_introduction_2023}.
 
 \subsection{Modèle classique}
-Les ondes électromagnétiques, telles que la lumière, correspondent à des perturbations oscillantes des champs électriques et magnétiques. Ces champs, perpendiculaires l'un à l'autre, oscillent également perpendiculairement à la direction de propagation de l'onde, formant une configuration tridimensionnelle caractéristique des ondes transervales. Ces ondes, comparativement aux ondes mécaniques, se propagent à la vitesse de la lumière. Celles-ci, produites par des particules chargées électroniquement en accélération, ne nécessitent aucun milieu de propagation, pouvant alors se propager dans le vide \textcolor{red}{(Source A)}.
+Les ondes électromagnétiques, telles que la lumière, correspondent à des perturbations oscillantes des champs électriques et magnétiques. Ces champs, perpendiculaires l'un à l'autre, oscillent également perpendiculairement à la direction de propagation de l'onde, formant une configuration tridimensionnelle caractéristique des ondes transervales. Ces ondes, comparativement aux ondes mécaniques, se propagent à la vitesse de la lumière. Celles-ci, produites par des particules chargées électroniquement en accélération, ne nécessitent aucun milieu de propagation, pouvant alors se propager dans le vide \cite{byjus_unit_2020}.
 
-Les ondes électromagnétiques sont régies par les équations de Maxwell et, à partir de celles-ci, il est possible d'obtenir les solutions générales aux équations d'onde, soient les ondes planes. Celles-ci, caractérisées par une direction de propagation $r$, une fréquence angulaire $\omega$, et un vecteur d'onde $k$, peuvent être écrites de la forme suivante \textcolor{red}{(Source B)} :
+Les ondes électromagnétiques sont régies par les équations de Maxwell et, à partir de celles-ci, il est possible d'obtenir les solutions générales aux équations d'onde, soient les ondes planes. Celles-ci, caractérisées par une direction de propagation $r$, une fréquence angulaire $\omega$, et un vecteur d'onde $k$, peuvent être écrites de la forme suivante \cite{zangwill_modern_2012} :
 \begin{equation}
   \begin{aligned}
   \mathbf{\Bar{E}}(\textbf{r},t)&=\mathbf{\Bar{E}_{0}}e^{i(\mathbf{kr}-\omega t)} & \;\;\;\;\;\;\;\; & \mathbf{\Bar{H}}(\mathbf{r},t)&=\mathbf{\Bar{H}_{0}}e^{i(\mathbf{kr}-\omega t)} \\
@@ -213,12 +205,9 @@ Ensemble, ces deux ondes planes sont des composantes potentielles d'une onde él
 \end{equation}
 Où $\lambda$ correspond à la longueur d'onde, et $T$ à la période. Ainsi, en observant l'équation (\ref{pol_lin}), celle-ci représente une polarisation linéaire en $z$.
 
-% Source A : Electromagnetic waves pdf
-% Source B : Modern electrodynimics, Zangwill Chapter 16.
-
 \subsubsection{Puissance optique}
 La puissance optique correspond à la capacité d'un système optique à converger, ou à diverger, la lumière. Cette puissance peut être calculée à l'aide de la moyenne temporelle du vecteur de Poynting ($\vec{S}$), qui représente la densité de flux lié à la propagation de l'onde.
-\begin{equation}
+\begin{equation}\label{power}
   P=\langle S\rangle=\frac{1}{\eta}|E|^{2}
 \end{equation}
 Où $\eta$ correspond à l'impédance du milieu de transmission, et $E$ au champ électrique.
@@ -233,15 +222,15 @@ En optique, la polarisation de la lumière peut être représentée à l'aide du
   \end{pmatrix}
 \end{equation}
 En ce qui concerne la matrice, celle-ci peut subir des rotations, créant ainsi une nouvelle matrice. Cette rotation est décrite par la matrice de rotation suivante.
-\begin{equation}
+\begin{equation}\label{rotat}
   R(\theta)=
   \begin{pmatrix}
     \cos(\theta) & \sin(\theta) \\
     -\sin(\theta) & \cos(\theta) \\
   \end{pmatrix}
 \end{equation}
-Où $\theta$ correspond à l'angle de rotation de la matrice. Ne s'appliquant qu'à la lumière entièrement polarisée, ce formalisme est, généralement, utilisé lors du traitement des phénomènes d'interférence et les problèmes de superposition des amplitudes de champ \textcolor{red}{(Source Z)}. À partir de cette formulation, l'état de polarisation résultant $\mathcal{J}$ est, ensuite, déterminée à l'aide d'un produit entre la matrice et le vecteur.
-\begin{equation}
+Où $\theta$ correspond à l'angle de rotation de la matrice. Ne s'appliquant qu'à la lumière entièrement polarisée, ce formalisme est, généralement, utilisé lors du traitement des phénomènes d'interférence et les problèmes de superposition des amplitudes de champ \cite{collett_jones_2005}. À partir de cette formulation, l'état de polarisation résultant $\mathcal{J}$ est, ensuite, déterminée à l'aide d'un produit entre la matrice et le vecteur.
+\begin{equation}\label{jonesm}
   \vec{\mathcal{J}}'=M_{\mathcal{J}}\cdot\vec{\mathcal{J}}
 \end{equation}
 Le modèle de Jones permet, tout comme le modèle classique, de calculer la puissance optique. Pour ce faire, il est possible d'utiliser le vecteur de Poyinting.
@@ -250,15 +239,12 @@ Le modèle de Jones permet, tout comme le modèle classique, de calculer la puis
 \end{equation}
 Où $\eta$ correspond à l'impédance du milieu de transmission, et $\vec{\mathcal{J}}$ est le vecteur de Jones.
 
-% Source Z : https://spie.org/publications/spie-publication-resources/optipedia-free-optics-information/fg05_p57-61_jones_matrix_calculus#_=_
-
 \section{Méthodologie}
 Cette section présente les méthodes et les outils utilisés pour réaliser l'expérience.
 
 \subsection{Présentation des montages}
 
-La méthode utilisée lors de ce laboratoire a pour but de mesurer l'évolution de la puissance transmise par un système optique en fonction de l'angle de polarisation de sa lumière. Les figures \ref{systeme a 2 polarisateur} et \ref{systeme a 3 polarisateur} présentent, sous la forme d'un schéma, les deux circuits étudiés lors de ce laboratoire\textcolor{red}{source enonce}.
-
+Le montage utilisé lors de ce laboratoire a pour but de mesurer l'évolution de la puissance transmise par un système optique en fonction de l'angle $\theta$ entre des polariseurs linéaires. Les figures \ref{systeme a 2 polarisateur} et \ref{systeme a 3 polarisateur} présentent, sous la forme d'un schéma, les deux montages étudiés lors de ce laboratoire \cite{sheehy_experience_2024}.
 
 \begin{figure}[H]
   \centering
@@ -274,7 +260,7 @@ La méthode utilisée lors de ce laboratoire a pour but de mesurer l'évolution 
         \label{systeme a 3 polarisateur}
 \end{figure}
 
-Chacun des systèmes est constitué d'une lampe au sodium comme source, suivie d'une lentille $L_1$ permettant d'en collimer le faisceau. Il passera, ensuite, à travers une série de réseaux de polarisation pour être, finalement, focalisé par une lentille $L_2$ sur la surface d'un \textit{power-meter}. Dans les deux systèmes présentés, le réseau de polarisation commence par un polarisateur horizontal $P_1$, celui-ci est suivi, pour le système 2, d'un polarisateur à angle variable $P_2$  et, pour le système 3, de deux polarisateurs à angle variable $P_2$ et $P_3$.
+Chacun des systèmes est constitué d'une lampe au sodium comme source, suivie d'une lentille $L_1$ permettant d'en collimer le faisceau. Ce dernier passera, ensuite, à travers une série de réseaux de polarisation pour être, finalement, focalisé par une lentille $L_2$ sur la surface d'un \textit{power-meter}. Dans les deux systèmes présentés, le réseau de polarisation commence par un polarisateur horizontal $P_1$, celui-ci est suivi, pour le premier système, d'un polarisateur à angle variable $P_2$  et, pour le second système, de deux polarisateurs à angle variable $P_2$ et $P_3$.
 
 \subsection{Manipulations}
 
@@ -300,13 +286,28 @@ Dans les deux cas, ces séries de mesure seront réalisées pour des angles comp
 \section{Hypothèses}
 
 Cette section utilise les deux modèles présentés à la section \ref{theo} pour simuler les mesures de
-coefficients de transmission qui pourront être faits avec les montages.
+coefficients de transmission qui pourront être faits avec les montages. Les graphiques ont été produits
+à l'aide de Python, avec une simple programmation des modèles présentés.
 
 \subsection{Modèle classique}
 
-Avec le modèle classique
+Avec le modèle classique, il est possible de simplifier l'expression de l'amplitude du champ électrique
+$E$ lorsqu'un rayon polarisé passe au travers d'un polariseur tourné d'un angle $\theta$ ainsi :
 
-les courbes présentées à la figure \ref{classique} montrent la variation
+\begin{equation}\label{E0}
+  E = E_{0}\cos\left( \theta \right)
+\end{equation}
+
+où $E_{0}$ est l'amplitude du champ électrique initialement polarisée. Si un troisième polariseur est
+présent, $E$ peut être utilisé dans (\ref{E0}) comme la nouvelle amplitude polarisée initiale. En utilisant
+cette amplitude dans (\ref{power}), il est possible d'obtenir une expression pour le coefficient $C$ de transmission
+de puissance pour une série de polariseurs :
+
+\begin{equation}
+  C = \frac{P\left( \theta \right)}{P\left( \theta= 0 \right)}
+\end{equation}
+
+Les courbes présentées à la figure \ref{classique} montrent la variation
 du coefficient de transmission en fonction de la variation de l'angle $\theta$ autant pour le 
 système à deux polariseurs qu'à trois polariseurs.
 
@@ -324,7 +325,26 @@ donc réduite avec l'ajout du polariseur, mais les minimums de puissance restent
 
 \subsection{Modèle de Jones}
 
-La figure \ref{jones} présente les mêmes courbes que pour le modèle classique, mais avec le modèle de Jones.
+Pour le modèle de Jones, la matrice de Jones suivante pour une polarisation linéaire horizontale a été utilisée :
+
+\begin{equation}
+  M_{\mathcal{J}} = \begin{bmatrix}
+    1 & 0 \\
+    0 & 0
+  \end{bmatrix}
+\end{equation}
+
+Pour considérer un polariseur tourné d'un angle $\theta$, il est possible d'y appliquer la matrice de rotation provenant
+de (\ref{rotat}) :
+
+\begin{equation}
+  M_{\mathcal{J}}\left( \theta \right)= R\left( -\theta \right)M_{\mathcal{J}}R\left( \theta \right)
+\end{equation}
+
+
+Avec ce résultat et (\ref{jonesm}), il est possible d'obtenir la puissance et donc le coefficient de transmission. Pour le cas à
+trois polariseurs, le résultat de (\ref{jonesm}) peut être réutilisé dans cette même équation pour réappliquer le
+passage au travers d'un polariseur. La figure \ref{jones} présente les mêmes courbes que pour le modèle classique, mais avec le modèle de Jones.
 
 \begin{figure}[H]
   \centering
@@ -336,10 +356,9 @@ La figure \ref{jones} présente les mêmes courbes que pour le modèle classique
 Il est possible de voir que les résultats sont les mêmes que pour le modèle classique. Les hypothèses à émettre
 sont donc les mêmes.
 
-
 \clearpage
 
-%\bibliographystyle{unsrtnat}
-%\bibliography{camera_prelab.bib}
+\bibliographystyle{unsrtnat}
+\bibliography{polarisation_prelab}
 
 \end{document}
