@@ -27,6 +27,7 @@
 \usepackage{multirow}
 \usepackage[hidelinks]{hyperref}
 \usepackage{abstract}
+\usepackage{braket}
 \renewcommand{\abstractnamefont}{\normalfont\bfseries}
 \renewcommand{\abstracttextfont}{\normalfont\itshape}
 \usepackage{titlesec}
@@ -73,6 +74,12 @@
 }
 
 %----------------------------------------------------
+
+\newcommand*{\Coord}[2]{% 
+    \begin{pmatrix} 
+      #1\\ 
+      #2 
+    \end{pmatrix}}
 
 \setlength{\parindent}{0pt}
 \DeclareCaptionLabelFormat{mycaptionlabel}{#1 #2}
@@ -206,7 +213,42 @@ bonne exactitude.
 % Source A : https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Quantifying_Nature/Significant_Digits/Propagation_of_Error
 
 \section{Discussion}
-Cette section présente l'analyse, l'interprétation et la critique des résultats obtenus de manière expérimentale.
+
+
+\subsection{Analyse des causes d'erreurs}
+
+\subsection{Discussion sur les modèles}
+\subsubsection{Analyse des causes d'erreurs}
+
+ Les erreurs présentées dans la partie 1.1 du rapport sont principalement dues aux imperfections des systèmes physiques utilisés, ce qui a pu être observé lors du laboratoire. Notamment lors du calcul de l'intensité après avoir placé le premier polarisateur qui aurait été, dans un cas idéal, divisée par deux peu importe la direction du polarisateur. Les valeurs obtenues dans ce cas sont plutôt de l'ordre de 0.32 fois la valeur initiale. Cette différence s'explique principalement grâce aux imperfections des filtres polarisateurs utilisés, 0.32 est une valeur approximative, variant elle-même d'un filtre à l'autre. Elle doit aussi être due à la lumière présente dans la pièce, dont l'impact parait néanmoins négligeable aux vues des valeurs de minimum mesurées qui avoisinaient les 0.001 mW. De plus, le réseau lampe/lentille positionné en entrée du montage devait produire, dans un cas idéal, un faisceau collimaté jusqu'à la seconde lentille. Lors de la mise en pratique ce faisceau avait une forme conique principalement due aux imperfections de la lampe utilisée dont les rayons divergeaient.
+
+\subsubsection{Lien avec le formalisme de Jones}
+
+En optique, la méthode des matrices permet de décrire l'impact d'un système physique composé de : lentilles, miroirs, filtre, polarisateurs, etc. Sur un faisceau le traversant, en fonction de sa position vis-à-vis de l'axe optique, et de son angle d'entrée. Sorte de fonction de transfert s'exprimant : 
+
+\begin{equation*}
+    y_{out} = Ay_{in}
+\end{equation*}
+
+Dans le formalisme optique A prend la forme d'une matrice et y d'un vecteur, exactement comme en mécanique quantique. Si on considère $\ket{y}$ comme étant l'état du faisceaux, la fonction de transfert A du système optique peut être interprétée comme un opérateur, tel que : 
+
+\begin{equation*}
+    \ket{y_{out}} = \hat{A}\ket{y_{in}}
+\end{equation*}
+
+Ainsi pour une polarisation planaire, le modèle de Jones considère une base $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ tel que tout état de polarisation puisse être exprimé comme :
+
+\begin{equation*}
+    \ket{y} = a\ket{\hat{x}} + b\ket{\hat{y}} = a\Coord{1}{0} + b\Coord{0}{1}
+\end{equation*}
+
+Où : $a^2 + b^2 = 1$ et et $P_2$  sont deux vecteurs orthonormaux. Les photons étant des particules de spin 1 pour lesquels l'état 0 est inaccessible, la base géométrique : $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$, fait un lien direct avec la notion de spin quantique au niveau de son formalisme. Le détail de ce formalisme est présenté dans le procédurier du laboratoire. Pour le système de polaristeur utilisé lors du laboratoire on pourrait par exemple avoir : 
+
+\begin{equation*}
+    \hat{A} = \hat{P_3}\hat{P_2}\hat{P_1} = \frac{1}{2}\Coord{1 \quad \pm 1}{\pm 1 \quad 1}\Coord{0 \quad 0}{0 \quad 1}\Coord{1 \quad 0}{0 \quad 0}
+\end{equation*}
+
+Ou $P_1$ serait alors polarisé horizontalement, $P_2$ verticalement et $P_3$ à $\pm$45°. Cette équation explicite le lien entre le formalisme du spin et celui de la polarisation de la lumière. Sont résultat est bien 0 car, une lumière polarisée horizontalement se retrouve entièrement bloquée par un polarisateur vertical, comme si les états géométriques $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ était des états de spin up and down, comme présenté précédemment (photon : spin 1 dont l'était 0 est inaccessible).
 
 \subsection{Analyse des causes d'erreurs}
 
