@@ -225,11 +225,11 @@ les cas à deux et trois polariseurs.
 
 \subsection{Analyse des causes d'erreurs}
 
- Les erreurs présentées dans la partie 1.1 du rapport sont principalement dues aux imperfections des systèmes physiques utilisés, ce qui a pu être observé lors du laboratoire. Notamment lors du calcul de l'intensité après avoir placé le premier polarisateur qui aurait été, dans un cas idéal, divisée par deux peu importe la direction du polarisateur. Les valeurs obtenues dans ce cas sont plutôt de l'ordre de 0.32 fois la valeur initiale. Cette différence s'explique principalement grâce aux imperfections des filtres polarisateurs utilisés, 0.32 est une valeur approximative, variant elle-même d'un filtre à l'autre. Elle doit aussi être due à la lumière présente dans la pièce, dont l'impact parait néanmoins négligeable aux vues des valeurs de minimum mesurées qui avoisinaient les 0.001 mW. De plus, le réseau lampe/lentille positionné en entrée du montage devait produire, dans un cas idéal, un faisceau collimaté jusqu'à la seconde lentille. Lors de la mise en pratique ce faisceau avait une forme conique principalement due aux imperfections de la lampe utilisée dont les rayons divergeaient.
+ Les erreurs présentées dans la partie 1.1 du rapport sont principalement dues aux imperfections des systèmes physiques utilisés, notamment lors du calcul de l'intensité après avoir placé le premier polarisateur qui aurait été, dans un cas idéal, divisée par deux peu importe la direction du polarisateur. Les valeurs obtenues, dans ce cas, sont plutôt de l'ordre de 0.32 fois la valeur initiale. Cette différence s'explique principalement grâce aux imperfections des filtres polarisateurs utilisés, 0.32 est une valeur approximative, variant elle-même d'un filtre à l'autre. Elle doit aussi être due à la lumière présente dans la pièce, dont l'impact parait néanmoins négligeable aux vues des valeurs de minimum mesurées qui avoisinaient les 0.001 mW. De plus, le réseau lampe/lentille positionné en entrée du montage devait produire, dans un cas idéal, un faisceau collimaté jusqu'à la seconde lentille. Lors de la mise en pratique, ce faisceau avait une forme conique principalement due aux imperfections de la lampe utilisée dont les rayons divergeaient.
 
-\subsection{Lien avec le formalisme de Jones}
+\subsection{Lien avec le formalisme de Jones}\label{jonesjones}
 
-En optique, la méthode des matrices permet de décrire l'impact d'un système physique composé de lentilles, miroirs, filtre, 
+En optique, la méthode des matrices permet de décrire l'impact d'un système physique composé de lentilles, miroirs, filtres, 
 polarisateurs, etc. sur un faisceau le traversant, en fonction de sa position vis-à-vis de l'axe optique, et de son angle 
 d'entrée. Un tel système s'exprime mathématiquement par une sorte de fonction de transfert, par exemple : 
 
@@ -237,7 +237,7 @@ d'entrée. Un tel système s'exprime mathématiquement par une sorte de fonction
     y_{out} = Ay_{in},
 \end{equation}
 
-où $y$  représentent les rayons d'entrée et de sortie et $A$ représente le système physique. Dans le formalisme optique $A$ 
+Où $y$  représente les rayons d'entrée et de sortie, et $A$ représente le système physique. Dans le formalisme optique, $A$ 
 prend la forme d'une matrice et $y$ d'un vecteur, exactement comme en mécanique quantique. Si on considère $\ket{y}$ comme 
 étant l'état du faisceau, la fonction de transfert $A$ du système optique peut être interprétée comme un opérateur, tel que : 
 
@@ -245,25 +245,25 @@ prend la forme d'une matrice et $y$ d'un vecteur, exactement comme en mécanique
     \ket{y_{out}} = \hat{A}\ket{y_{in}}.
 \end{equation}
 
-Ainsi pour une polarisation planaire, le modèle de Jones considère une base $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ tel 
+Ainsi, pour une polarisation planaire, le modèle de Jones considère une base $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ telle 
 que tout état de polarisation puisse être exprimé comme :
 
 \begin{equation}
     \ket{y} = a\ket{\hat{x}} + b\ket{\hat{y}} = a\Coord{1}{0} + b\Coord{0}{1},
 \end{equation}
 
-où $a^2 + b^2 = 1$ et les kets de la base sont deux vecteurs orthonormaux. Les photons étant des particules de spin 1 pour 
+Où $a^2 + b^2 = 1$ et les kets de la base sont deux vecteurs orthonormaux. Les photons, étant des particules de spin 1 pour 
 lesquels l'état 0 est inaccessible, la base géométrique $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ fait un lien direct avec 
 la notion de spin quantique au niveau de son formalisme. Le détail de ce formalisme est présenté dans le procédurier du 
-laboratoire \textcolor{red}{procedurier}. Pour le système de polaristeur utilisé lors du laboratoire on pourrait par
-exemple avoir : 
+laboratoire \textcolor{red}{procedurier}. Pour le système de polaristeur utilisé lors du laboratoire, il serait possible, par
+exemple, d'avoir  : 
 
 \begin{equation*}
     \hat{A} = \hat{P_3}\hat{P_2}\hat{P_1} = \frac{1}{2}\Coord{1 \quad \pm 1}{\pm 1 \quad 1}\Coord{0 \quad 0}{0 \quad 1}\Coord{1 \quad 0}{0 \quad 0},
 \end{equation*}
 
-où $\hat{P_1}$ serait alors un polariseur horizontal, $\hat{P_2}$ vertical et $\hat{P_3}$ diagonal à $\pm$45°. Tel qu'attendu, le produit matriciel donne 0 : une
-lumière polarisée horizontalement se retrouve entièrement bloquée par un polarisateur vertical. L'application de $\hat{A}$ sur un état de la la base, donc à une polarisation linéraire, retourne un vecteur nul. Cela illustre que le traitement
+Où $\hat{P_1}$ serait alors un polariseur horizontal, $\hat{P_2}$ vertical et $\hat{P_3}$ diagonal à $\pm$45°. Tel qu'attendu, le produit matriciel donne 0 : une
+lumière polarisée horizontalement se retrouve entièrement bloquée par un polarisateur vertical. L'application de $\hat{A}$ sur un état de la base, donc à une polarisation linéraire, retourne un vecteur nul. Cela illustre que le traitement
 des états par kets et des éléments d'un système par opérateur est identique pour le formalisme quantique que pour celui de Jones, entre autres de par le fait que la base présentée pour le modèle de Jones est pratiquement indistinguable à la base des particules de spin $\frac{1}{2}$. Tel que spécifié, même si les photons sont de spin 1, comme l'état 0 est inaccessible, sa base contient aussi seulement deux éléments.
 
 \subsection{Question 1}
@@ -277,7 +277,7 @@ Pour provoquer une rotation de l'état de polarisation de 90$^\circ$, il est pos
 De cette manière, pour un dispositif contenant quatre polariseurs, l'efficacité de celui-ci est défini par la valeur du cosinus, soit de $\cos^{6}(\theta)$. L'effet du nombre de polariseurs permet d'augmenter l'efficacité des polariseurs. En effet, l'ajout de polariseurs permet de diminuer les angles entre ceux-ci, permettant de minimiser les pertes causées entre les différentes étapes. Ainsi, en augmentant le nombre de polariseurs, la rotation de la polarisation est davantage graduelle, et la transmission augmente. De cette manière, un nombre infini de polariseurs devrait tendre vers une efficacité parfaite.
 
 \subsection{Question 3}
-Les états de polarisations, tels que les états quantiques, peuvent être illustrés sous forme matricielle et vectorielle dans l'espace de Hilbert, similairement aux états quantiques en deux dimensions. Cette représentation permet de relier les concepts quantiques, tels que la superposition et l'interférence, à des phénomènes optiques dont la polarisation de la lumière. 
+Comme mentionné dans la section \ref{jonesjones}, les états de polarisations, tels que les états quantiques, peuvent être illustrés sous forme matricielle et vectorielle dans l'espace de Hilbert, similairement aux états quantiques en deux dimensions. Cette représentation permet de relier les concepts quantiques, tels que la superposition et l'interférence, à des phénomènes optiques dont la polarisation de la lumière. 
 
 Par exemple, un état de polarisation d'un photon est une combinaison de la polarisation horizontale et verticale, ou une combinaison de la polarisation circulaire droite et gauche. Cette combinaison, se présentant sous la forme de moment angulaire droit et gauche, est directement reliée au principe de superposition des états de la mécanique quantique. De cette manière, la quantification de ces moments angulaires est considéré comme l'hélicité de l'état \textcolor{red}{(Source)}. Dans le cas d'un photon, cette hélicité, similairement au spin quantique, représente le moment cinétique intrinsèque de la particule.
 
