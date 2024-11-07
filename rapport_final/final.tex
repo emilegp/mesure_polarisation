@@ -268,12 +268,43 @@ Pour provoquer une rotation de l'état de polarisation de 90$^\circ$, il est pos
 De cette manière, pour un dispositif contenant quatre polariseurs, l'efficacité de celui-ci est défini par la valeur du cosinus, soit de $\cos^{6}(\theta)$. L'effet du nombre de polariseurs permet d'augmenter l'efficacité des polariseurs. En effet, l'ajout de polariseurs permet de diminuer les angles entre ceux-ci, permettant de minimiser les pertes causées entre les différentes étapes. Ainsi, en augmentant le nombre de polariseurs, la rotation de la polarisation est davantage graduelle, et la transmission augmente. De cette manière, un nombre infini de polariseurs devrait tendre vers une efficacité parfaite.
 
 \subsection{Question 3}
+Les états de polarisations, tels que les états quantiques, peuvent être illustrés sous forme matricielle et vectorielle dans l'espace de Hilbert, similairement aux états quantiques en deux dimensions. Cette représentation permet de relier les concepts quantiques, tels que la superposition et l'interférence, à des phénomènes optiques dont la polarisation de la lumière. 
+
+Par exemple, un état de polarisation d'un photon est une combinaison de la polarisation horizontale et verticale, ou une combinaison de la polarisation circulaire droite et gauche. Cette combinaison, se présentant sous la forme de moment angulaire droit et gauche, est directement reliée au principe de superposition des états de la mécanique quantique. De cette manière, la quantification de ces moments angulaires est considéré comme l'hélicité de l'état \textcolor{red}{(Source)}. Dans le cas d'un photon, cette hélicité, similairement au spin quantique, représente le moment cinétique intrinsèque de la particule.
+
+\subsubsection{Exemple de superposition d'états}
+L'état de polarisation horizontal, soit en $x$, est donné par le vecteur suivant :
+\begin{equation}
+  \ket{H}=
+  \begin{pmatrix}
+    1 \\
+    0 \\
+  \end{pmatrix}
+\end{equation}
+L'état de polarisation circulaire droit, soit $\ket{R}$, est défini par le vecteur suivant :
+\begin{equation}
+  \ket{R}=\frac{1}{\sqrt{2}}(\ket{H}-i\ket{V})
+  \label{R}
+\end{equation}
+Alors que l'état de polarisation circulaire gauche est donné par :
+\begin{equation}
+  \ket{L}=\frac{1}{\sqrt{2}}(\ket{H}+i\ket{V})
+\end{equation}
+Où $\ket{V}$ est le vecteur de polarisation vertical. En isolant ce vecteur vertical dans une des équations circulaires, il est possible de remplacer l'équation trouvée et, par la suite, d'isoler le vecteur horizontal. Ainsi, en isolant $\ket{V}$ dans l'équation \ref{R}, la formule suivante est obtenue.
+\begin{equation}
+  \ket{V}=\frac{1}{i}\ket{H}-\frac{\sqrt{2}}{i}\ket{R}
+\end{equation}
+En remplaçant l'équation ci-dessus dans celle de la polarisation circulaire gauche et en isolant la valeur recherchée, le résultat suivant est trouvé.
+\begin{equation}
+  \ket{H}=\frac{\sqrt{2}}{2}(\ket{R}+\ket{L})
+\end{equation}
+Ainsi, l'état de polarisation horizontal est une superposition des polarisations circulaires.
 
 \subsection{Question 4}
 Les vecteurs de Jones sont utiles pour représenter les états de polarisation entièrement polarisés puisque ceux-ci décrivent uniquement l'amplitude et la phase de la polarisation d'une onde lumineuse. Cependant, dans le cas des états partiellement polarisés, un paramètre supplémentaire doit être considéré, soit le degré de polarisation. De cette manière, les paramètres de Strokes sont utilisés pour les états partiellement polarisés puisque cette méthode permet l'algèbre de dimension 4, alors que celle de Jones ne permet qu'un algèbre de dimension 2. En d'autres termnes, les vecteurs de Jones ne permettent pas de décrire les états partiellement polarisés, car ceux-ci n'ont pas toutes les informations nécessaires pour représenter les composantes non polarisés de la lumière, alors que les paramètres de Strokes le permettent.
 
 \section{Conclusion}
-
+En conclusion, l'objectif de cette expérience consistait à mesurer l'effet d'un filtre polariseur sur un faisceau de lumière polarisée à l'aide d'un système optique composé d'une source lumineuse, de deux lentilles, et de polariseurs. À partir d'une série de mesure d'intensité lumineuse à des angles de polarisation variants, les courbes des coefficients de transmission ont été réalisées, permettant de vérifier les hypothèses émises précédemment. En analysant les courbes obtenues, les imperfections entre les données trouvées et celles posées ont été justifiées par des causes d'erreurs telles que la forme conique du faisceau et la lumière ambiante. Ainsi, cette expérience a permis d'approfondir les connaissances sur le formalisme de Jones ainsi que de visualiser les différentes polarisations.
 
 
 \clearpage
