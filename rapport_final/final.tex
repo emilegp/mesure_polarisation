@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{etoolbox}
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
-% \usepackage[numbers]{natbib}
+\usepackage[numbers]{natbib}
 \usepackage[T1]{fontenc}
 \usepackage{ragged2e}
 \usepackage[french]{babel}
@@ -155,7 +155,7 @@ tendance prédite.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.7]{viz_deux_pol.png}
+  \includegraphics[scale=0.75]{viz_deux_pol.png}
   \caption{Résultats de la prise de mesure superposée à la prédiction de l'hypothèse pour la 
   mesure à deux polariseurs.}
   \label{2pol}
@@ -167,7 +167,7 @@ $\cos^{4}\left( \theta \right)$ émise par l'hypothèse.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.7]{viz_trois_pol.png}
+  \includegraphics[scale=0.75]{viz_trois_pol.png}
   \caption{Résultats de la prise de mesure superposée à la prédiction de l'hypothèse pour la 
   mesure à trois polariseurs.}
   \label{3pol}
@@ -207,7 +207,7 @@ Pour les incertitudes sur les coefficients de transmission $C$, le point de dép
 
 où $P$ est la puissance mesurée à un certain angle $\theta$ et $P_{0}$ est $P\left( \theta= 0 \right)$.
 La propagation d'erreur pour une division de la sorte permet de calculer l'incertitude sur $C$ pour un
-certain $P$ \textcolor{red}{source A} :
+certain $P$ \cite{caldwell_propagation_2013} :
 
 \begin{equation}\label{deltac}
   \Delta C = C\sqrt{\left( \frac{\Delta P}{P} \right)^{2} + \left( \frac{\Delta P_{0}}{P_{0}} \right)^{2}},
@@ -255,7 +255,7 @@ que tout état de polarisation puisse être exprimé comme :
 Où $a^2 + b^2 = 1$ et les kets de la base sont deux vecteurs orthonormaux. Les photons, étant des particules de spin 1 pour 
 lesquels l'état 0 est inaccessible, la base géométrique $\{$$\ket{\hat{x}}$, $\ket{\hat{y}}$$\}$ fait un lien direct avec 
 la notion de spin quantique au niveau de son formalisme. Le détail de ce formalisme est présenté dans le procédurier du 
-laboratoire \textcolor{red}{procedurier}. Pour le système de polaristeur utilisé lors du laboratoire, il serait possible, par
+laboratoire \cite{sheehy_experience_2024}. Pour le système de polaristeur utilisé lors du laboratoire, il serait possible, par
 exemple, d'avoir  : 
 
 \begin{equation*}
@@ -270,16 +270,16 @@ des états par kets et des éléments d'un système par opérateur est identique
 Pour fabriquer un filtre à transmission ajustable, il est possible d'utiliser le même principe que celui réalisé dans cette expérience. En d'autres termnes, en utilisant deux polariseurs linéaires, placés en série avec un angle variable entre leurs axes de polarisation, la transmission devient dépendante de la valeur de l'angle. Ainsi, un filtre de transmission ajustable est créé. Cette méthode fonctionne pour tous les types de faisceaux. Cependant, selon le type de celui-ci, un différent nombre de filtre est nécessaire. Si le faisceau n'est pas polarisé, deux filtres doivent être utilisés alors que, si le faisceau est polarisé, un seul filtre est nécessaire.
 
 \subsection{Question 2}
-Pour provoquer une rotation de l'état de polarisation de 90$^\circ$, il est possible d'utiliser une série de polariseurs linéaires orientés à des angles intermédiaires afin de réaliser une rotation progressive. Par exemple, avec trois polariseurs, le premier est placé à un angle de 0$^\circ$, le deuxième à 45$^\circ$, et le troisième à 90$^\circ$. Ce type de dispositif entraîne une perte d'intensité en fonction de l'angle entre les axes de polarisation des polariseurs successifs suivant la loi suivante \textcolor{red}{(Procédurier)}.
+Pour provoquer une rotation de l'état de polarisation de 90$^\circ$, il est possible d'utiliser une série de polariseurs linéaires orientés à des angles intermédiaires afin de réaliser une rotation progressive. Par exemple, avec trois polariseurs, le premier est placé à un angle de 0$^\circ$, le deuxième à 45$^\circ$, et le troisième à 90$^\circ$. Ce type de dispositif entraîne une perte d'intensité en fonction de l'angle entre les axes de polarisation des polariseurs successifs suivant la loi suivante \cite{sheehy_experience_2024}.
 \begin{equation}
   I=I_{0}\cos^{2}(\theta)
 \end{equation}
 De cette manière, pour un dispositif contenant quatre polariseurs, l'efficacité de celui-ci est défini par la valeur du cosinus, soit de $\cos^{6}(\theta)$. L'effet du nombre de polariseurs permet d'augmenter l'efficacité des polariseurs. En effet, l'ajout de polariseurs permet de diminuer les angles entre ceux-ci, permettant de minimiser les pertes causées entre les différentes étapes. Ainsi, en augmentant le nombre de polariseurs, la rotation de la polarisation est davantage graduelle, et la transmission augmente. De cette manière, un nombre infini de polariseurs devrait tendre vers une efficacité parfaite.
 
 \subsection{Question 3}
-Comme mentionné dans la section \ref{jonesjones}, les états de polarisations, tels que les états quantiques, peuvent être illustrés sous forme matricielle et vectorielle dans l'espace de Hilbert, similairement aux états quantiques en deux dimensions. Cette représentation permet de relier les concepts quantiques, tels que la superposition et l'interférence, à des phénomènes optiques dont la polarisation de la lumière. 
+Comme mentionné dans la section \ref{jonesjones}, les états de polarisations, tels que les états quantiques, peuvent être illustrés sous forme matricielle et vectorielle dans un espace de Hilbert, similairement aux états quantiques en deux dimensions. Cette représentation permet de relier les concepts quantiques, tels que la superposition et l'interférence, à des phénomènes optiques dont la polarisation de la lumière. 
 
-Par exemple, un état de polarisation d'un photon est une combinaison de la polarisation horizontale et verticale, ou une combinaison de la polarisation circulaire droite et gauche. Cette combinaison, se présentant sous la forme de moment angulaire droit et gauche, est directement reliée au principe de superposition des états de la mécanique quantique. De cette manière, la quantification de ces moments angulaires est considéré comme l'hélicité de l'état \textcolor{red}{(Source)}. Dans le cas d'un photon, cette hélicité, similairement au spin quantique, représente le moment cinétique intrinsèque de la particule.
+Par exemple, un état de polarisation d'un photon est une combinaison de la polarisation horizontale et verticale, ou une combinaison de la polarisation circulaire droite et gauche. Cette combinaison, se présentant sous la forme de moment angulaire droit et gauche, est directement reliée au principe de superposition des états de la mécanique quantique. De cette manière, la quantification de ces moments angulaires est considéré comme l'hélicité de l'état \cite{noauthor_spin_2005}. Dans le cas d'un photon, cette hélicité, similairement au spin quantique, représente le moment cinétique intrinsèque de la particule.
 
 \subsubsection{Exemple de superposition d'états}
 L'état de polarisation horizontal, soit en $x$, est donné par le vecteur suivant :
@@ -310,7 +310,7 @@ En remplaçant l'équation ci-dessus dans celle de la polarisation circulaire ga
 Ainsi, l'état de polarisation horizontal est une superposition des polarisations circulaires.
 
 \subsection{Question 4}
-Les vecteurs de Jones sont utiles pour représenter les états de polarisation entièrement polarisés puisque ceux-ci décrivent uniquement l'amplitude et la phase de la polarisation d'une onde lumineuse. Cependant, dans le cas des états partiellement polarisés, un paramètre supplémentaire doit être considéré, soit le degré de polarisation. De cette manière, les paramètres de Strokes sont utilisés pour les états partiellement polarisés puisque cette méthode permet l'algèbre de dimension 4, alors que celle de Jones ne permet qu'un algèbre de dimension 2. En d'autres termnes, les vecteurs de Jones ne permettent pas de décrire les états partiellement polarisés, car ceux-ci n'ont pas toutes les informations nécessaires pour représenter les composantes non polarisés de la lumière, alors que les paramètres de Strokes le permettent.
+Les vecteurs de Jones sont utiles pour représenter les états de polarisation entièrement polarisés puisque ceux-ci décrivent uniquement l'amplitude et la phase de la polarisation d'une onde lumineuse. Cependant, dans le cas des états partiellement polarisés, un paramètre supplémentaire doit être considéré, soit le degré de polarisation. De cette manière, les paramètres de Strokes sont utilisés pour les états partiellement polarisés puisque cette méthode permet l'algèbre de dimension 4, alors que celle de Jones ne permet qu'un algèbre de dimension 2. En d'autres termes, les vecteurs de Jones ne permettent pas de décrire les états partiellement polarisés, car ceux-ci n'ont pas toutes les informations nécessaires pour représenter les composantes non polarisés de la lumière, alors que les paramètres de Strokes le permettent.
 
 \section{Conclusion}
 En conclusion, l'objectif de cette expérience consistait à mesurer l'effet d'un filtre polariseur sur un faisceau de lumière polarisée à l'aide d'un système optique composé d'une source lumineuse, de deux lentilles, et de polariseurs. À partir d'une série de mesure d'intensité lumineuse à des angles de polarisation variants, les courbes des coefficients de transmission ont été réalisées, permettant de vérifier les hypothèses émises précédemment. En analysant les courbes obtenues, les imperfections entre les données trouvées et celles posées ont été justifiées par des causes d'erreurs telles que la forme conique du faisceau et la lumière ambiante. Ainsi, cette expérience a permis d'approfondir les connaissances sur le formalisme de Jones ainsi que de visualiser les différentes polarisations.
@@ -318,7 +318,7 @@ En conclusion, l'objectif de cette expérience consistait à mesurer l'effet d'u
 
 \clearpage
 
-% \bibliographystyle{unsrtnat}
-% \bibliography{My_Library}
+\bibliographystyle{unsrtnat}
+\bibliography{polarisation_final.bib}
 
 \end{document}
