@@ -145,7 +145,7 @@ Polytechnique Montréal\\}
 
 %----------------------------------------------------
 
-\section{Résultats}
+\section{Résultats}\label{res}
 
 Suite à la prise de données au laboratoire, il est possible de comparer les valeurs de
 coefficients de transmission obtenus aux hypothèses émises pour les mesures à deux et trois polariseurs.
@@ -173,15 +173,33 @@ $\cos^{4}\left( \theta \right)$ émise par l'hypothèse.
   \label{3pol}
 \end{figure}
 
-\subsection{Estimation des erreurs}
-
 Les incertitudes présentées avec les barres d'erreurs dans les graphiques ont été trouvées comme suit.
 Pour les incertitudes sur l'angle $\theta$, la valeur est tout simplement la moitié de la plus petite
 graduation sur les cadrans gradués, multiplié par le nombre de cadrans utilisés. Ainsi, pour les
 mesures à deux polariseurs, comme la plus petite graduation était de $1\degree$, l'incertitude 
-$\Delta\theta$  sur l'angle est aussi de $1\degree$. Pour trois polariseurs, $\Delta\theta = 1.5\degree$. 
+$\Delta\theta$  sur l'angle est aussi de $1\degree$. Pour trois polariseurs, $\Delta\theta = 1.5\degree$.
+Quant aux incertitudes au compteur de puissance, elles sont trouvées par la plus petite valeur lisible au
+compteur de puissance, soit $0.001$ mW. Les incertitudes pour les angles dans les barres d'erreurs des graphiques sont données 
+directement par $\Delta\theta$. Les incertitudes sur les coefficients de transmission sont plus complexes
+à obtenir. Leur calcul est détaillé à la section \ref{inc}. Danc ces calculs, en remplaçant par les valeurs numériques obtenues 
+lors des expériences, il est possible d'estimer l'erreur sur les ordonnées en posant une borne supérieure 
+sur la valeur qu'elle peut prendre :
 
-Pour les incertitudes sur les coefficients de transmission $C$, dont le calcul se fait par
+\begin{align*}
+  \text{Deux polariseurs : }\Delta C &\leq 0.005\\ 
+  \text{Trois polariseurs : }\Delta C &\leq 0.008
+\end{align*}
+
+Les erreurs relatives maximales, étant donné que les coefficients à l'angle $\theta= 0$ sont donc de 0.5\% et de 0.8\% pour deux et trois polariseurs, ce qui est faible et signe d'un résultat avec une bonne exactitude.
+
+\section{Discussion}
+
+Cette section est consacrée à l'analyse des résultats obtenus et à la discussion sur les concepts employés
+lors de ce laboratoire.
+
+\subsection{Estimation des erreurs}\label{inc}
+
+Pour les incertitudes sur les coefficients de transmission $C$, le point de départ est la formule du coefficient :
 
 \begin{equation}
   C = \frac{P}{P_{0}},
@@ -191,32 +209,25 @@ où $P$ est la puissance mesurée à un certain angle $\theta$ et $P_{0}$ est $P
 La propagation d'erreur pour une division de la sorte permet de calculer l'incertitude sur $C$ pour un
 certain $P$ \textcolor{red}{source A} :
 
-\begin{equation}
+\begin{equation}\label{deltac}
   \Delta C = C\sqrt{\left( \frac{\Delta P}{P} \right)^{2} + \left( \frac{\Delta P_{0}}{P_{0}} \right)^{2}},
 \end{equation}
 
-où $\Delta P$ et $\Delta P_{0}$ sont des incertitudes correspondant à la plus petite valeur lisible au
-compteur de puissance, qui valent tous les deux $0.001$ mW. Selon le modèle mathématique de 
+où $\Delta P$ et $\Delta P_{0}$ sont les incertitudes correspondant à la plus petite valeur lisible au
+compteur de puissance, tel que discuté plus tôt. Selon le modèle mathématique de 
 l'erreur $\Delta C$ et selon les données expérimentales, il est possible de voir que l'erreur maximale 
-est en $\theta= 0$ où $C$ est maximal. Ainsi, en remplaçant par les valeurs numériques obtenues lors 
-des expériences, il est possible d'estimer l'erreur sur les ordonnées en posant une borne supérieure 
-sur la valeur qu'elle peut prendre :
+est en $\theta= 0$ où $C$ est maximal. Ainsi, les bornes sur l'erreur de la section \ref{res} proviennent
+de l'insertion de $C\left( \theta= 0 \right)$ dans (\ref{deltac}) pour obtenir les valeurs numériques pour
+les cas à deux et trois polariseurs.
 
-\begin{align*}
-  \text{Deux polariseurs : }\Delta C &\leq 0.005\\ 
-  \text{Trois polariseurs : }\Delta C &\leq 0.008
-\end{align*}
-
-Les erreurs relatives maximales, étant donné que les coefficients à l'angle $\theta= 0$ sont donc de 0.5\% et de 0.8\% pour deux et trois polariseurs, ce qui est faible et signe d'un résultat avec une bonne exactitude.
 % Source A : https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Quantifying_Nature/Significant_Digits/Propagation_of_Error
 
-\section{Discussion}
 
-\subsubsection{Analyse des causes d'erreurs}
+\subsection{Analyse des causes d'erreurs}
 
  Les erreurs présentées dans la partie 1.1 du rapport sont principalement dues aux imperfections des systèmes physiques utilisés, ce qui a pu être observé lors du laboratoire. Notamment lors du calcul de l'intensité après avoir placé le premier polarisateur qui aurait été, dans un cas idéal, divisée par deux peu importe la direction du polarisateur. Les valeurs obtenues dans ce cas sont plutôt de l'ordre de 0.32 fois la valeur initiale. Cette différence s'explique principalement grâce aux imperfections des filtres polarisateurs utilisés, 0.32 est une valeur approximative, variant elle-même d'un filtre à l'autre. Elle doit aussi être due à la lumière présente dans la pièce, dont l'impact parait néanmoins négligeable aux vues des valeurs de minimum mesurées qui avoisinaient les 0.001 mW. De plus, le réseau lampe/lentille positionné en entrée du montage devait produire, dans un cas idéal, un faisceau collimaté jusqu'à la seconde lentille. Lors de la mise en pratique ce faisceau avait une forme conique principalement due aux imperfections de la lampe utilisée dont les rayons divergeaient.
 
-\subsubsection{Lien avec le formalisme de Jones}
+\subsection{Lien avec le formalisme de Jones}
 
 En optique, la méthode des matrices permet de décrire l'impact d'un système physique composé de : lentilles, miroirs, filtre, polarisateurs, etc. Sur un faisceau le traversant, en fonction de sa position vis-à-vis de l'axe optique, et de son angle d'entrée. Sorte de fonction de transfert s'exprimant : 
 
